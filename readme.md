@@ -76,7 +76,7 @@ const visualiser = new NormalDistributionVisualiser('visualiser-container', {
 
 ```
 ## Demo
-View sample code in 
+View sample code in Example Directory
 
 
 ## License and Attribution
@@ -99,3 +99,10 @@ For in-text citations, you can use:
 Lloyd, A., 2024. Normal Distribution Visualiser. [online] GitHub. Available at: <https://github.com/Alloyd21/NormalDistributionVisualiser> [Accessed 23 July 2024].
 
 In-text citation: (Lloyd, 2024)
+
+
+# Links
+
+NPM: https://www.npmjs.com/package/normaldistributionvisualiser
+
+GitHub: https://github.com/Alloyd21/NormalDistributionVisualiser
