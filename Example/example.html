@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal Distribution Visualiser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #visualiser-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 95vw;
+            max-width: 1200px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            cursor: move;
+            width: 100%;
+            height: auto;
+        }
+        #values, #quartiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .value-box {
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        #stats {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="visualiser-container"></div>
+
+    <script src="..\NormalDistributionVisualiser.js"></script>
+    <script>
+        const visualiser = new NormalDistributionVisualiser('visualiser-container', {
+            width: 900,
+            height: 450,
+            min: 0,
+            max: 20,
+            average: 10,
+            standardDeviation: 2.5,
+            totalRecords: 1000,
+            quartileColors: ['rgba(255, 0, 0, 0.2)', 'rgba(0, 255, 0, 0.2)', 'rgba(0, 0, 255, 0.2)', 'rgba(255, 255, 0, 0.2)'],
+            curveColor: 'black',
+            showStats: true,
+            showValues: true,
+            showQuartiles: true,
+            interactive: true
+        });
+
+        // Example of how to access the calculated values
+        console.log(visualiser.getValues());
+    </script>
+</body>
+</html>
