@@ -40,8 +40,8 @@ class NormalDistributionVisualiser {
     }
 
     setupCanvas() {
-        this.canvas.width = this.props.width;
-        this.canvas.height = this.props.height;
+        this.canvas.width = this.props.width * 1.5;
+        this.canvas.height = this.props.height * 1.5;
     }
 
     addEventListeners() {
